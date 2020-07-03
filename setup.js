@@ -111,7 +111,7 @@ if (config.machines !== undefined) {
     const machine = config.machines[i];
     machines.push(Machine({
       id: i,
-      privateIP: machine.runtimeNetworks[0].ip,
+      privateIP: "10.10.0.1", //machine.runtimeNetworks[0].ip,
       sshPort: sshPort(machine),
       role: 'master',
     }));
@@ -121,7 +121,7 @@ if (config.machines !== undefined) {
     const machine = config.machines[config.controlPlane.nodes + i];
     machines.push(Machine({
       id: i,
-      privateIP: machine.runtimeNetworks[0].ip,
+      privateIP: "10.10.0.2",  //machine.runtimeNetworks[0].ip,
       sshPort: sshPort(machine),
       role: 'worker',
     }));
